@@ -24,9 +24,6 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log(`ID : ${socket.id} -> IN`)
-    // socket.on('disconnection', (arg) => {
-    //   console.log(`Quelqu'un s'est déconnecté au serveur (ID : ${arg})`)
-    // })
 });
 
 const PORT = process.env.PORT;
