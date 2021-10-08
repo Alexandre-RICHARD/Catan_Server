@@ -22,7 +22,6 @@ const mainController = {
         io.emit('playerList', Object.values(mainController.playerList));
     },
     messageOnChat: (req, res, next) => {
-        console.log(req.body);
         const io = req.app.get('socketio');
         io.emit('newGlobalMessage', {talker: req.body.talker, time: req.body.time, message: req.body.message});
         try {
